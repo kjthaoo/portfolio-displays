@@ -1,0 +1,316 @@
+<!-- Note: This code was AI-generated using Claude (Anthropic) and is used solely for visual display purposes in my portfolio. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Through the Senses — Peer Reviews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ocean-deep: #0a2a3a;
+      --ocean-mid: #1a5276;
+      --ocean-light: #aed6f1;
+      --foam: #e8f4fd;
+      --white: #ffffff;
+      --sand: #f5f0ea;
+      --text-dark: #0d1f2d;
+      --text-mid: #2c5f7a;
+      --text-light: #6a9ab0;
+    }
+
+    html, body {
+      min-height: 100vh;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--foam);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* Animated background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 80% 50% at 20% 20%, rgba(26, 82, 118, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(174, 214, 241, 0.15) 0%, transparent 60%),
+        linear-gradient(180deg, #e8f4fd 0%, #f5f0ea 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Wave decoration */
+    .wave-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--ocean-deep), var(--ocean-mid), var(--ocean-light), var(--ocean-mid), var(--ocean-deep));
+      background-size: 200% 100%;
+      animation: waveFlow 4s linear infinite;
+      z-index: 10;
+    }
+
+    @keyframes waveFlow {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 200% 0%; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 32px 80px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 64px;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .header-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+
+    .header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .header-line {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--ocean-mid), transparent);
+      margin: 0 auto;
+    }
+
+    /* Cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(28px);
+      animation: fadeUp 0.7s ease forwards;
+      border: 1px solid rgba(174, 214, 241, 0.3);
+      box-shadow: 0 4px 24px rgba(10, 42, 58, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(10, 42, 58, 0.12);
+    }
+
+    .card:nth-child(1) { animation-delay: 0.15s; }
+    .card:nth-child(2) { animation-delay: 0.25s; }
+    .card:nth-child(3) { animation-delay: 0.35s; }
+
+    /* Accent corner */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--ocean-mid), var(--ocean-light));
+      border-radius: 16px 0 0 16px;
+    }
+
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--ocean-light);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .card-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+
+    .card-author {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    /* Wide card spans full width */
+    .card.wide {
+      grid-column: 1 / -1;
+    }
+
+    /* Professor card */
+    .card.professor {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-mid) 100%);
+      border: none;
+      color: var(--white);
+    }
+
+    .card.professor::before {
+      background: linear-gradient(180deg, #f0c040, #e8a020);
+    }
+
+    .card.professor .quote-mark {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    .card.professor .card-text {
+      color: var(--foam);
+    }
+
+    .card.professor .card-author {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .professor-badge {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #f0c040;
+      background: rgba(240, 192, 64, 0.15);
+      border: 1px solid rgba(240, 192, 64, 0.3);
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+    }
+
+    .professor-score {
+      float: right;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: #f0c040;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 56px;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.6s forwards;
+    }
+
+    .footer-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--text-light);
+    }
+
+    .footer-dot {
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--ocean-light);
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .cards { grid-template-columns: 1fr; }
+      .card.wide { grid-column: 1; }
+      .container { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wave-top"></div>
+  <div class="container">
+
+    <div class="header">
+      <p class="header-eyebrow">Peer Feedback</p>
+      <h1>Through the Senses</h1>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="cards">
+
+      <div class="card professor">
+        <span class="professor-score">10 / 10</span>
+        <div class="professor-badge">Instructor Feedback</div>
+        <span class="quote-mark">"</span>
+        <p class="card-text">All your shots are effective in telling the story emotionally and through time and space. There are great moments where layering the audio over the music really fills out the sound space and supports your narrative beautifully.</p>
+        <span class="card-author">Course Instructor</span>
+      </div>
+
+      <div class="card">
+        <span class="quote-mark">"</span>
+        <p class="card-text">Your shots were beautiful, colorful, and full of emotion. It brought me back to a time of feeling completely care free.</p>
+        <span class="card-author">Classmate</span>
+      </div>
+
+      <div class="card">
+        <span class="quote-mark">"</span>
+        <p class="card-text">The slow pans of the surroundings made me feel like I was exploring with you. The natural sounds like waves and laughter really pulled me in.</p>
+        <span class="card-author">Classmate</span>
+      </div>
+
+      <div class="card wide">
+        <span class="quote-mark">"</span>
+        <p class="card-text">The video felt very cohesive. The textures, the laughter, and the small intimate moments all came together to create a really satisfying girls trip vibe.</p>
+        <span class="card-author">Classmate</span>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <p class="footer-text">
+        Film Production Course
+        <span class="footer-dot"></span>
+        Spring 2025
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
